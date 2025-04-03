@@ -10,8 +10,15 @@ int main()
 	{
 
 	scanf(" %c", &arr[i]);
+	if(arr[i] > 'Z')
+	{
+
 	arr[i] = arr[i] - ('a' - 'A');
+
+	}
+
 	printf("%c", arr[i]);
+
 	}
 	
 	return 0;
