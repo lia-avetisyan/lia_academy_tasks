@@ -15,19 +15,21 @@ int main()
 	}
 
 	int min = arr[0];
+	int min_index = 0;
 	for(int i = 0; i < n; ++i)
 	{
 
 	if(arr[i] < min)
 	{
 	
-        min = i;
+        min = arr[i];
+	min_index = i;
 
 	}
 
 	}
 
-	printf("The min value is : %d\n", min);
+	printf("The min value is : %d\n", min_index);
 	return 0;
 }
 
