@@ -3,7 +3,7 @@
 int main()
 {
 
-	const int n = 5;
+	const int n = 3;
 	int arr[n];
 	
 	printf("Please input element of 5 range : ");
