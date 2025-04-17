@@ -14,7 +14,7 @@ int compare_strings(const char *str1, const char *str2)
 
 		else
 		{
-			return 0;
+			return -1;
 		}
         }
 
@@ -28,7 +28,7 @@ int compare_strings(const char *str1, const char *str2)
 
     	if (str1[i] == '\0') 
     	{	
-	   	 return 0;
+	   	 return -1;
     	}
     
     	else

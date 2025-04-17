@@ -13,7 +13,7 @@ int is_vowel(char c)
     	lower = c;
 	}	
 
-
+	return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 }
 
 void vowels_and_consonants(const char *str, int *vowels, int *consonants) 
