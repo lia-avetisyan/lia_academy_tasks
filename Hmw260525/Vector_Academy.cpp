@@ -34,6 +34,9 @@ public:
     }
 
     ~My_Vector() {
+        m_capacity = 0;
+        m_size = 0;
+        m_data = nullptr;
         delete[] m_data;
     }
 
@@ -46,7 +49,7 @@ public:
     }
 
     void push_back(int val) {
-        if (m_size == m_capacity) {
+        if (m_size == m_capacity && m_capacity != 0) {
             size_t new_capacity = m_capacity * 2;
             reallocate(new_capacity);
         }
@@ -56,7 +59,9 @@ public:
 
 
     void pop_back() {
+        if (m_size != 0) {
             --m_size;
+        }
     }
 
     void resize(size_t new_size) {
@@ -64,7 +69,11 @@ public:
             size_t new_capacity = new_size * 2;
             reallocate(new_capacity);
         }
+        int old_size = m_size;
         m_size = new_size;
+        for (size_t i = old_size; i < m_size; ++i) {
+            m_data[i] = 0;
+        }
     }
 
     void clear() {
@@ -76,4 +85,3 @@ int main() {
 
     return 0;
 }
-
